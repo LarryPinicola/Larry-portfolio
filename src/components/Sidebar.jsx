@@ -36,12 +36,17 @@ const Sidebar = () => {
         <div className='flex border border-green-500'>
             {/* btn */}
             {showSidebar && (
-                <button className='md:hidden fixed z-50 top-4 left-4 bg-gray-400 text-white' onClick={toggleSidebar}>
-                    {isOpen ? 'close' : 'menu'}
+                <button className='md:hidden fixed z-50 top-4 right-4 bg-gray-400 text-white' onClick={toggleSidebar}>
+                    Menu
                 </button>
             )}
 
-            <div className={`fixed inset-0 z-40 bg-gray-800 bg-opacity-75 transition-opacity ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+            <div
+                className={`fixed inset-0 z-40 border border-green-600 bg-gray-800 bg-opacity-75 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                onClick={toggleSidebar}
+            />
+
+            <div className={`fixed inset-y-0 left-0 z-50 w-full bg-white shadow-xl border border-red-600 duration-700 ${isOpen ? 'translate-x-0' : 'translate-x-80'}`}>
                 <div className="p-3 flex justify-between items-center md:hidden">
                     <h2 className="text-lg font-bold">Menu</h2>
                     <button onClick={toggleSidebar}>close</button>
