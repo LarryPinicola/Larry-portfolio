@@ -2,7 +2,7 @@
     position: relative;
     top: 0;
     width: 100%;
-    padding: 20px 35px;
+    padding: 20px 25px;
 }
 
 .head {
@@ -25,7 +25,7 @@
 .nav-item {
     color: #8D493A;
     cursor: pointer;
-    font-size: small;
+    font-size: medium;
     /* letter-spacing: 2px; */
     font-weight: 400;
     padding: 2px 0;
